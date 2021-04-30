@@ -6,7 +6,9 @@ import Navbar from "./components/navbar.component";
 import ListPosts from "./components/list-posts.component";
 import EditPost from "./components/edit-post.component";
 import CreatePost from "./components/create-post.component";
-import CreateUser from "./components/create-user.component";
+import SignUp from "./components/sign-up.component";
+import SignIn from "./components/sign-in.component";
+import User from "./components/user.component";
 
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
         <Route path="/" exact component={ListPosts}/>
         <Route path="/edit/:id" exact component={EditPost}/>
         <Route path="/create" exact component={CreatePost}/>
-        <Route path="/user" exact component={CreateUser}/>
+        <Route path="/signup" exact component={SignUp}/>
+        <Route path="/signin" exact component={SignIn}/>
+        <Route path="/u/:username" exact component={User}/>
       </div>
     </Router>
   );

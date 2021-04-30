@@ -19,7 +19,7 @@ export default class CreatePost extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:365/users/')
+        axios.get('http://localhost:3650/users/')
             .then(response => {
                 if(response.data.length > 0) {
                     this.setState({
@@ -54,7 +54,7 @@ export default class CreatePost extends Component {
         }
 
         console.log(post);
-        axios.post('http://localhost:365/posts/add', post)
+        axios.post('http://localhost:3650/posts/add', post)
             .then(res => console.log(res.data));
         window.location='/';
     }
